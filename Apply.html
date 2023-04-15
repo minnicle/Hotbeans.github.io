@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hot Beans Web</title>
+
+<script>
+function validateForm() {
+  	var formName = document.forms["appForm"]["name"].value;
+	var formEmail = document.forms["appForm"]["email"].value;
+  	var formFile = document.forms["appForm"]["file"].value;
+
+  	if (formName == "") {
+    	alert("Name must be filled out");
+    	return false;
+  	}
+	if (formEmail == "") {
+    	alert("Email must be filled out");
+    	return false;
+  	}
+  	if (formFile == "") {
+    	alert("Please attach a file");
+    	return false;
+  	}
+}
+</script>
+
+</head>
+
+<body>
+
+<h1><img src = "hotbeansLOGO.png" class = "logo" alt="logo">Hot Beans Web</h1>
+
+<div class = "nav">
+	<a href = "HotBeans.html">HOME</a>
+</div><div class = "nav">
+	<a href = "Team.html">MEET THE TEAM</a>
+</div><div class = "nav">
+	<a href = "Job.html">JOB SPECIFICATIONS</a>
+</div><div class = "nav">
+	<a href = "Apply.html">APPLY</a>
+</div><div class = "nav">
+	<a href = "Courses.html">COURSES</a>
+</div>
+
+<div id = "application">
+    <h2>Application Form</h2>
+    <form name="appForm" action="thankyou.html" onsubmit="return validateForm()" method="post">
+        <p>Name: 
+        	<input type="text" placeholder="Enter Your Name" id="name" name="name"/>
+        </p>
+        <p>Email: 
+       	  <input type="text" placeholder="Enter Your Email" id="email" name="email"/>
+          </p>
+        <p>Role: 
+        	<select id="role" name="role">
+                <option disabled selected value> -- select a job role -- </option>
+                <option value="Front End">Front End</option>
+                <option value="Back End">Back End</option>
+                <option value="IT Technician">Full-Stack</option>
+        	</select>
+        </p>
+        <p>Attach your CV below:</p>
+        	<input type="file" id="file" name="file">
+        <p><button onclick="sendContact();">Submit</button></p>
+  
+	</form>
+</div>
+
+</body>

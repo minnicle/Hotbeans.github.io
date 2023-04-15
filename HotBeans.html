@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hot Beans Web</title>
+
+<script>
+function validateForm() {
+  	var formName = document.forms["contact"]["name"].value;
+	var formEmail = document.forms["contact"]["email"].value;
+  	var formFile = document.forms["contact"]["file"].value;
+
+  	if (formName == "") {
+    	alert("Name must be filled out");
+    	return false;
+  	}
+	if (formEmail == "") {
+    	alert("Email must be filled out");
+    	return false;
+  	}
+}
+</script>
+
+</head>
+
+<body>
+
+<h1><img src = "hotbeansLOGO.png" class = "logo" alt="logo">Hot Beans Web</h1>
+
+<div class = "nav">
+	<a href = "HotBeans.html">HOME</a>
+</div><div class = "nav">
+	<a href = "Team.html">MEET THE TEAM</a>
+</div><div class = "nav">
+	<a href = "Job.html">JOB SPECIFICATIONS</a>
+</div><div class = "nav">
+	<a href = "Apply.html">APPLY</a>
+</div><div class = "nav">
+	<a href = "Courses.html">COURSES</a>
+</div>
+
+<div id = "welcome">
+	<h2>Welcome to Hot Beans Web!</h2>
+	<p>
+    Scroll down to learn more about us...
+  </p>
+</div>
+
+<div id = "aboutUs">
+	<h2>About us</h2>
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et quam sit amet turpis tincidunt egestas ac sit amet diam. Curabitur tempor felis at lacus interdum, ut accumsan lacus viverra. Vivamus tincidunt lectus metus, et tempus odio porttitor aliquam. Etiam sed libero sed felis auctor maximus id sit amet justo. Sed neque sapien, semper ut molestie eget, mollis nec mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer placerat id nulla vitae hendrerit. Etiam vitae lectus mattis, luctus risus quis, tempus ante. Aliquam ullamcorper sapien ut arcu rhoncus elementum. Fusce erat ipsum, congue sed nulla eget, egestas ultrices turpis. Sed maximus, eros sit amet gravida tempus, enim lacus viverra magna, in hendrerit diam eros eget lectus. Vivamus convallis sagittis massa, vel blandit purus accumsan ut. Aliquam a lobortis justo.
+  </p>
+</div>
+
+<div id = "contactUs">
+    <h2>Contact Us</h2>
+    <p>
+		Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque mollis egestas facilisis. Mauris semper consectetur nisi in bibendum. Pellentesque ut eleifend justo. Integer viverra erat a molestie volutpat.
+    </p>
+    <form name="contact" action="thankyou.html" onsubmit="return validateForm()" method="post">
+        <p>Name: 
+        	<input type="text" placeholder="Enter Your Name" id="name" name="name"/>
+        </p>
+        <p>Email: 
+       	  <input type="text" placeholder="Enter Your Email" id="email" name="email"/>
+          </p>
+
+        <p>Message: 
+       	  <input type="text" placeholder="Enter Your Message" id="message" name="message"/>
+        <p>Attach a file below</p>
+        	<input type="file" id="file" name="file">
+        <p><button onclick="sendContact();">Submit</button></p>
+  
+	</form>
+</div>
+
+</body>
